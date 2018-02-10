@@ -37,14 +37,9 @@ namespace Urho3D
 {
 
 TileMapLayer2D::TileMapLayer2D(Context* context) :
-    Component(context),
-    tmxLayer_(nullptr),
-    drawOrder_(0),
-    visible_(true)
+    Component(context)
 {
 }
-
-TileMapLayer2D::~TileMapLayer2D() = default;
 
 void TileMapLayer2D::RegisterObject(Context* context)
 {

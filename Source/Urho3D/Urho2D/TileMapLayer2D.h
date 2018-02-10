@@ -49,7 +49,7 @@ public:
     /// Construct.
     explicit TileMapLayer2D(Context* context);
     /// Destruct.
-    ~TileMapLayer2D() override;
+    ~TileMapLayer2D() override = default;
     /// Register object factory.
     static void RegisterObject(Context* context);
 
@@ -112,17 +112,17 @@ private:
     /// Tile map.
     WeakPtr<TileMap2D> tileMap_;
     /// Tmx layer.
-    const TmxLayer2D* tmxLayer_;
+    const TmxLayer2D* tmxLayer_{};
     /// Tile layer.
-    const TmxTileLayer2D* tileLayer_;
+    const TmxTileLayer2D* tileLayer_{};
     /// Object group.
-    const TmxObjectGroup2D* objectGroup_;
+    const TmxObjectGroup2D* objectGroup_{};
     /// Image layer.
-    const TmxImageLayer2D* imageLayer_;
+    const TmxImageLayer2D* imageLayer_{};
     /// Draw order.
-    int drawOrder_;
+    int drawOrder_{};
     /// Visible.
-    bool visible_;
+    bool visible_{true};
     /// Tile node or image nodes.
     Vector<SharedPtr<Node> > nodes_;
 };

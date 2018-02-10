@@ -44,8 +44,6 @@ TileMap2D::TileMap2D(Context* context) :
 {
 }
 
-TileMap2D::~TileMap2D() = default;
-
 void TileMap2D::RegisterObject(Context* context)
 {
     context->RegisterFactory<TileMap2D>(URHO2D_CATEGORY);
